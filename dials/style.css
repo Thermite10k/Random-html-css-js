@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: bisque;
+}
+.abs {
+  position: absolute;
+}
+.container {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dial-body {
+  background-color: beige;
+
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50% 50% 0 0;
+}
+ul.digits {
+  list-style: none;
+}
+
+.one {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.two {
+  top: 15%;
+  left: 25%;
+  transform: translateX(-50%);
+}
+.three {
+  top: 15%;
+
+  left: 75%;
+  transform: translateX(-50%);
+}
+.four {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pointer {
+  border-radius: 0 0 50% 50%;
+  height: 45%;
+  width: 5px;
+  background-color: black;
+  top: 50%;
+  right: 50%;
+  transform-origin: top;
+  transform: rotate(90deg);
+}
+.dial-body:hover .pointer {
+  transform: rotate(270deg);
+  transition: transform 1s ease-in-out;
+}
